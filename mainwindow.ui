@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ICS0025</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="12" column="1">
+     <widget class="QPushButton" name="computeButton">
+      <property name="text">
+       <string>Compute</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QDoubleSpinBox" name="x0SpinBox">
+      <property name="minimum">
+       <double>-500.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>500.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QLabel" name="orderLabel">
+      <property name="text">
+       <string>Order:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="numPointsLabel">
+      <property name="text">
+       <string>Num Points:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="x0Label">
+      <property name="text">
+       <string>X0:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QPushButton" name="connectButton">
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QLabel" name="graphLabel">
+      <property name="text">
+       <string>Graph:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="2">
+     <widget class="QPlainTextEdit" name="statusBox">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QComboBox" name="functionComboBox">
+      <item>
+       <property name="text">
+        <string>Sine integral</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cosine integral</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bessel function</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fresnel integral S</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fresnel integral C</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QPushButton" name="exitButton">
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QLabel" name="xNLabel">
+      <property name="text">
+       <string>Xn:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QSpinBox" name="numPointsSpinBox">
+      <property name="maximum">
+       <number>500</number>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QDoubleSpinBox" name="xNSpinBox">
+      <property name="minimum">
+       <double>-500.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>500.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QSpinBox" name="orderSpinBox"/>
+    </item>
+    <item row="14" column="0">
+     <widget class="QPushButton" name="breakButton">
+      <property name="text">
+       <string>Break</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3" rowspan="7" colspan="2">
+     <widget class="QCustomPlot" name="graph" native="true"/>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLabel" name="lineStyleLabel">
+      <property name="text">
+       <string>Line Style</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="functionLabel">
+      <property name="text">
+       <string>Function:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3" colspan="2">
+     <widget class="QComboBox" name="lineStyleComboBox">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Normal line</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Step (left)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Step (right)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Step (center)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Impulse</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
